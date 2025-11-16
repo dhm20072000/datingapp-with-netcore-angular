@@ -10,7 +10,7 @@ export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
 
   if(req.method === 'GET'){
     const cachedResponse = cache.get(req.url);
-    console.log('cachedResponse', req);
+    // console.log('cachedResponse', req);
     if(cachedResponse){
       return of(cachedResponse);
     }
