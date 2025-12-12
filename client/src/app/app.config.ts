@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
       return new Promise<void>((resolve) => {
         setTimeout(async () => {
           try{
-            return lastValueFrom(initService.init());
+            await lastValueFrom(initService.init());
           }
           catch(error){
             console.log('AppInitializer', error);
